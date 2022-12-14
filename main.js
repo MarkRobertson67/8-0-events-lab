@@ -7,3 +7,26 @@ for (let i = 0; i < 100; i++) {
 }
 
 // You may write your code here!
+
+const selectPalette = document.querySelector('#palette div').style.background
+document.querySelectorAll("#palette div").forEach(div => {
+  div.addEventListener('click', selectColor => {
+    document.querySelector('#current-color').style.background = selectColor.target.style.background;
+  })
+});
+
+document.querySelectorAll('.cell').forEach(cell => {
+  cell.addEventListener('click', selectedCell => {
+    selectedCell.target.style.background = document.querySelector('#current-color').style.background;
+  })
+});
+
+
+
+// const pallette = document.querySelectorAll("color");
+// for (let color of colors) {
+//   color.addEventListener("click", () => {
+//     let color = curret-color;
+//   });
+// }
+
